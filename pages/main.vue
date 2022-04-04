@@ -6,11 +6,14 @@
 </template>
 
 <script>
-import NuxtLogo from '@/components/NuxtLogo';
+import axios from 'axios';
+
 export default {
   name: "mainPage",
-  components:{
-    NuxtLogo
+  async created() {
+    const response = await axios.get('https://localhost:3000/products');
+    console.log(response);
+
   }
 }
 </script>
