@@ -56,8 +56,8 @@ export default {
   methods:{
     moveToDetailPage(id){
       console.log(id);
-      // nuxt에 라우터를 가지고 있어서 아래와 가이 쓸수 있다.
-      this.$router.push(`detail/${id}`);
+      // nuxt에 라우터를 가지고 있어서 아래와 같이 쓸수 있다.
+      this.$router.push(`detail/${id}`)
     }
 
   }
