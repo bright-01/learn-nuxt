@@ -1,3 +1,4 @@
+<script src="../store/index.js"></script>
 <template>
   <div class="container">
     <h1 class="list-title">담긴 상품 목록</h1>
@@ -18,9 +19,17 @@
   </div>
 </template>
 <script>
+
+
+
+import {FETCH_CART_ITEMS} from "~/store";
+
 export default {
   // eslint-disable-next-line vue/multi-word-component-names
-  name: "cart"
+  name: "cart",
+  async asyncData({ store }){
+    await store.dispatch(FETCH_CART_ITEMS);
+  }
 }
 </script>
 <style scoped>
