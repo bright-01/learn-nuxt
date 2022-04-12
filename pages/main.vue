@@ -15,12 +15,13 @@
 </template>
 
 <script>
-import axios from 'axios';
+// import axios from 'axios';
+import {fetchProducts} from "~/api";
 // import ProductList from "~/components/ProductList";
 export default {
 
   async asyncData(){
-    const response = await axios.get('http://localhost:3000/products');
+    const response = await fetchProducts();
     // this.products = response.data;
     // asyncData() 에서는 this에 접근이 불가능 하다
     const products = response.data.map((item) => ({
