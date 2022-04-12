@@ -27,9 +27,9 @@ import {FETCH_CART_ITEMS} from "~/store";
 export default {
   // eslint-disable-next-line vue/multi-word-component-names
   name: "cart",
-  async asyncData({ store }){
-    await store.dispatch(FETCH_CART_ITEMS);
-  }
+  // async asyncData({ store }){
+    // await store.dispatch(FETCH_CART_ITEMS);
+  // }
 }
 </script>
 <style scoped>

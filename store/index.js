@@ -30,5 +30,16 @@ export const actions = {
       }))
     );
 
+  },
+  async nuxtServerInit(storeContext, nuxtContext){
+    await storeContext.dispatch(FETCH_CART_ITEMS);
+    // const {data} = await fetchCartItems();
+    // storeContext.commit('setCartItem', data.map((item) => ({
+    //     ...item,
+    //     imageUrl: `${item.imageUrl}?random=${Math.random()}`
+    //   }))
+    // );
   }
+
+
 }
