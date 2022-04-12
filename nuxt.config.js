@@ -37,5 +37,11 @@ export default {
 
   server: {
     port: process.env.NODE_ENV  === 'production' ? null : 3001
+  },
+
+  // env config
+  env:{
+    baseUrl: process.env.NODE_ENV === 'production' ? 'https://my-json-server.typicode.com/bright-01/learn-nuxt-api' : 'http://localhost:3000'
   }
+
 }
