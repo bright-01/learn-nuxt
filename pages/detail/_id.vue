@@ -21,6 +21,16 @@
 
 import {createCartItem, fetchProductById} from "@/api/index";
 export default {
+  head: {
+    title: 'Shopping Item Detail',
+    meta: [
+      {
+        hid: 'description',
+        name: 'description',
+        content: '이 상품입니다.',
+      },
+    ]
+  },
   name: "_id",
   data(){
     return {
