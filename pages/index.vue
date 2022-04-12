@@ -20,17 +20,17 @@
 </template>
 
 <script>
-import axios from 'axios';
+// import axios from 'axios';
 // import ProductList from "~/components/ProductList";
 import SearchInput from "@/components/SearchInput";
-import {fetchProductsByKeyword} from "~/api";
+import {fetchProducts, fetchProductsByKeyword} from "~/api";
 export default {
   name: "MainPage",
   components:{
     SearchInput
   },
   async asyncData(){
-    const response = await axios.get('http://localhost:3000/products');
+    const response = await fetchProducts();
     // this.products = response.data;
     // asyncData() 에서는 this에 접근이 불가능 하다
     const products = response.data.map((item) => ({
